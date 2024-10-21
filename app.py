@@ -8,7 +8,7 @@ import tensorflow as tf
 
 app = Flask(__name__)
 CORS(app)
-loaded_model = tf.keras.models.load_model(r'C:\Users\Devi Priya T\Downloads\Potato_Mobile_App\saved_models\2.keras')
+loaded_model = tf.keras.models.load_model('saved_models\2.keras')
 
 def read_file_as_image(data) -> np.ndarray:
     image = np.array(Image.open(BytesIO(data)))
